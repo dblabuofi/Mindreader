@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+        <head>
+                <title>MindReader</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <link rel="icon" type="image/x-icon"  href="image/favicon1.ico"/>
+                <link rel="icon" type="image/png" href="image/favicon1-16.png" />
+
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+                <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+                <link rel="stylesheet" href="codemirror/codemirror.css">
+                <link rel="stylesheet" href="codemirror/theme/rubyblue.css">
+                
+                
+                
+                <!--<link rel="stylesheet" href="css/newcss.css">-->
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+                <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.js"></script>
+                <script src= "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+                <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>  
+                <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+                
+                <script src="codemirror/codemirror.js"></script>
+                <script src="codemirror/mode/clike.js"></script>
+                
+                <script src="app.js"></script>
+                
+                <script src="factories/urlfactory.js"></script>
+                
+                <script src="controllers/algorithmController.js"></script>
+                <script src="controllers/editerController.js"></script>
+                <script src="controllers/submitController.js"></script>
+                
+                <link rel="stylesheet" href="css/editer.css">
+                
+                
+        </head>
+        <body ng-controller="appController">
+                <nav class="navbar navbar-default" style="background-color:#010101">
+                        <div class="container-fluid">
+                                <div class="navbar-header">
+                                        <a class="navbar-brand" href="#home" style="font-size:3em;color:#FF7101;font-weight: bold;font-family:Roman;">
+                                                Mind<span style="font-style: italic;color:#e67905;">Reader</span>
+                                        </a>
+                                </div>
+                                <div>
+                                        <ul class="nav navbar-nav">
+                                                <li><a href="#editer" style="font-size:2em;color:#FFFFFF;">Editer</a></li>
+                                                <li><a href="#algorithm" style="font-size:2em;color:#FFFFFF;">Algorithm</a></li>
+                                                <li><a href="#submit" style="font-size:2em;color:#FFFFFF;">Submit</a></li>
+                                        </ul>
+                                </div>
+                                <div class="navbar-brand pull-right">
+                                        <!--<a ng-click="Readme()" style="cursor: pointer; font-size:2em;color:#927346;" >Instructions</a>-->
+                                        <a href="manual/Twitter Manual.pdf" target="_blank" style="cursor: pointer; font-size:2em;color:#FB5F50;" >Manual</a>
+                                        &nbsp;
+                                        <a ng-click="modalOpen()" style="cursor: pointer; font-size:2em;color:#FB5F50;" >About</a>
+                                </div>
+                        </div>
+                </nav>
+                <div ng-view></div>
+                
+                <script type="text/ng-template" id="myModalContentAbout.html">
+                        <div class="modal-header">
+                        <h3 class="modal-title">About <img src="image/uofidaho.png" alt="University of Idaho" style="width:300px;height:40px;" class="pull-right"></h3>
+                        </div>
+                        <div class="modal-body">
+                        <p>This is the first makeup MindReader Project.</p> 
+                        </div>
+                        <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" ng-click="ok(this)">OK</button>
+                        </div>
+                </script>
+
+                
+                
+        </body>
+</html>

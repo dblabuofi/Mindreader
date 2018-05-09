@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="row">
+                <div class="col-md-6">
+                        <div class="row">
+                                <div class="col-md-2">
+                                        <label class="label label-info">
+                                                Algorithms
+                                        </label>
+                                </div>
+                                <div class="col-md-10">
+                                        <select class="form-control">
+                                                <option>Bubble Sort</option>
+                                                <option>Quick Sort</option>
+                                                <option selected>Merge Sort</option>
+                                        </select>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <label class="label label-info">Code:</label>
+                            <textarea ng-model="userCode" style="resize:none;margin-top: 1vh;margin-bottom: 1vh;" class="form-control" rows="25"></textarea>
+                            <button class="btn btn-primary" ng-click="submit()">Submit Code</button>
+                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <label class="label label-info">Similarity:</label>
+                        <label class="badge label-primary">100%</label>
+                    </div>
+                    <div class="row">
+                            <label class="label label-info">PDG:</label>
+                            <textarea style="resize:none;margin-top: 1vh;" class="form-control" rows="25"></textarea>
+                    </div>
+                    
+                </div>
+        </div>
+</div>
